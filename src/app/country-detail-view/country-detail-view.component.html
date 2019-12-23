@@ -33,6 +33,10 @@
         <td>Languages</td>
         <td><span *ngFor="let language of country?.languages"><b>({{language.name}})</b> </span></td>
       </tr>
+      <tr>
+        <td>Regional Blocks</td>
+        <td><span *ngFor="let regionalBloc of country?.regionalBlocs"><b>({{regionalBloc.name}})</b> </span></td>
+      </tr>
     </tbody>
   </table>
 
@@ -40,6 +44,7 @@
 
   <h2>{{country?.name}}'s Bordering countries</h2>
   <table class="table table-striped">
+   <tbody>
     <tr *ngFor="let border of country?.borders">
       <td><a href="/detail/{{border}}">{{border}}</a></td>
     </tr>
