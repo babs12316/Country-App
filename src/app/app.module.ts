@@ -9,8 +9,10 @@ import { CountryListComponent } from "./country-list/country-list.component";
 import { CountryDetailViewComponent } from "./country-detail-view/country-detail-view.component";
 import { AgmCoreModule } from "@agm/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const appRoutes: Routes = [
+  { path: "", component: WelcomeComponent },
   { path: "index", component: CountryListComponent },
   { path: "detail", component: CountryDetailViewComponent },
   { path: "detail/:id", component: CountryDetailViewComponent }
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CountryListComponent,
-    CountryDetailViewComponent
+    CountryDetailViewComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
