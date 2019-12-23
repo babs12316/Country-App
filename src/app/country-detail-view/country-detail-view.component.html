@@ -11,34 +11,34 @@
       </tr>
       <tr>
         <td>Country</td>
-        <td>{{country?.name}}</td>
+        <td><b>{{country?.name}}</b></td>
       </tr>
       <tr>
         <td>Population</td>
-        <td>{{country?.population}}</td>
+        <td><b>{{country?.population}}</b></td>
       </tr>
       <tr>
         <td>Region</td>
-        <td>{{country?.region}}</td>
+        <td><b>{{country?.region}}</b></td>
       </tr>
       <tr>
         <td>Capital</td>
-        <td>{{country?.capital}}</td>
+        <td><b>{{country?.capital}}</b></td>
       </tr>
       <tr>
         <td>Currency</td>
-        <td><span *ngFor="let currency of country?.currencies">{{currency.name}}</span></td>
+        <td><span *ngFor="let currency of country?.currencies"><b>{{currency.name}}</b></span></td>
       </tr>
       <tr>
         <td>Languages</td>
-        <td><span *ngFor="let language of country?.languages">({{language.name}}) </span></td>
+        <td><span *ngFor="let language of country?.languages"><b>({{language.name}})</b> </span></td>
       </tr>
     </tbody>
   </table>
 
 
 
-  <h2> Bordering countries</h2>
+  <h2>{{country?.name}}'s Bordering countries</h2>
   <table class="table table-striped">
     <tr *ngFor="let border of country?.borders">
       <td><a href="/detail/{{border}}">{{border}}</a></td>
