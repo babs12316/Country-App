@@ -1,21 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import {HttpClientModule} from  '@angular/common/http';
-import { CountryListComponent } from './country-list.component';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from "@angular/common/http";
+import { CountryListComponent } from "./country-list.component";
 
-describe('CountryListComponent', () => {
+describe("CountryListComponent", () => {
   let component: CountryListComponent;
   let fixture: ComponentFixture<CountryListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        HttpClientModule,
-      ],
-      declarations: [ CountryListComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [CountryListComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -24,21 +20,20 @@ describe('CountryListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a method called ngOnInit', () => {
+  it("should have a method called ngOnInit", () => {
     expect(component.ngOnInit).toBeTruthy();
-});
-  
-  it('should have a method called getCountries', () => {
-     expect(component.getCountries).toBeTruthy();
-});
+  });
 
-it('should return json from API', () => {
-  let result=component.ngOnInit();
-  expect(result).length>0;
-});
+  it("should have a method called getCountries", () => {
+    expect(component.getCountries).toBeTruthy();
+  });
 
+  it("should return json from API", () => {
+    let result = component.ngOnInit();
+    expect(result).length > 0;
+  });
 });

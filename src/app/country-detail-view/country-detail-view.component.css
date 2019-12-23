@@ -1,29 +1,28 @@
-.card-detail{
-    margin-top:5%;
+.card-detail {
+  margin-top: 5%;
 }
-.card-detail h2{
-    margin-top:5%;    
+.card-detail h2 {
+  margin-top: 5%;
 }
-.card-detail img{
-    width:100px;
-    height:100px;
+.card-detail img {
+  width: 100px;
+  height: 100px;
 }
- agm-map {
-    height: 300px;
+agm-map {
+  height: 300px;
 }
-.table{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    border:5px solid #00A0D7;
-
+.table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 5px solid #00a0d7;
 }
-.table-striped tbody tr:nth-of-type(odd){
-    background-color: #00A0D7;
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #00a0d7;
 }
-a{
-    color:#000;
-    font-weight: bold;
+a {
+  color: #000;
+  font-weight: bold;
 }
-a:hover{
-    cursor: pointer;
+a:hover {
+  cursor: pointer;
 }

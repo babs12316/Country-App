@@ -10,10 +10,10 @@ import { AfterViewInit, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./country-detail-view.component.css"]
 })
 export class CountryDetailViewComponent implements OnInit {
-  title: string = 'Country Map';
+  title: string = "Country Map";
   latitude: number;
   longitude: number;
-  zoom:number;
+  zoom: number;
   country: Observable<any>;
 
   constructor(
@@ -25,13 +25,12 @@ export class CountryDetailViewComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get("id");
     console.log("id is" + id);
-     this.getCountry(id);
-   }
+    this.getCountry(id);
+  }
 
-  private getCountry(id: string) {
+  public getCountry(id: string) {
     this.countriesService
       .getCountry(id)
       .subscribe(country => (this.country = country));
   }
-
 }

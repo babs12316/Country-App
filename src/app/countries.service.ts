@@ -13,24 +13,17 @@ export class CountriesService {
 
   public getCountries(): Observable<any> {
     let subject: Subject<any> = new Subject();
-
-    this.httpClient.get(this.countriesUrl).subscribe((results: any) => {
-      console.log(results);
-
+     this.httpClient.get(this.countriesUrl).subscribe((results: any) => {
       subject.next(results);
     });
-
     return subject;
   }
   public getCountry(countryCode: string): Observable<any> {
     let subject: Subject<any> = new Subject();
-
     this.httpClient
       .get(this.countryUrl + countryCode)
       .subscribe((results: any) => {
-        console.log(results);
-
-        subject.next(results);
+       subject.next(results);
       });
 
     return subject;
@@ -38,13 +31,10 @@ export class CountriesService {
 
   public getLatLng(countryCode: string): Observable<any> {
     let subject: Subject<any> = new Subject();
-
     this.httpClient
       .get(this.countryUrl + countryCode)
       .subscribe((results: any) => {
-        console.log(results.latlng[0]);
-
-        subject.next(results.latlng[0]);
+       subject.next(results.latlng[0]);
       });
 
     return subject;
