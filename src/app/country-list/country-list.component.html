@@ -10,7 +10,7 @@
     <tr *ngFor="let country of countries; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>
-        <a routerLink="/detail/{{country.alpha2Code}}">
+        <a routerLink="/detail/{{country.alpha2Code}}" title="Click on me to see country details">
           <img src="{{country.flag}}" class="mr-2" style="width: 20px" />
           {{ country.name }}
         </a>
