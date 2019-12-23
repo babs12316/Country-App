@@ -1,0 +1,51 @@
+<div class="card-detail">
+  <agm-map [latitude]="country?.latlng[0]" [longitude]="country?.latlng[1]" [zoom]="5">
+    <agm-marker [latitude]="country?.latlng[0]" [longitude]="country?.latlng[1]"></agm-marker>
+  </agm-map>
+  <h2>Country's Detail Information</h2>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Flag</td>
+        <td><img src="{{country?.flag}}" /></td>
+      </tr>
+      <tr>
+        <td>Country</td>
+        <td>{{country?.name}}</td>
+      </tr>
+      <tr>
+        <td>Population</td>
+        <td>{{country?.population}}</td>
+      </tr>
+      <tr>
+        <td>Region</td>
+        <td>{{country?.region}}</td>
+      </tr>
+      <tr>
+        <td>Capital</td>
+        <td>{{country?.capital}}</td>
+      </tr>
+      <tr>
+        <td>Currency</td>
+        <td><span *ngFor="let currency of country?.currencies">{{currency.name}}</span></td>
+      </tr>
+      <tr>
+        <td>Languages</td>
+        <td><span *ngFor="let language of country?.languages">({{language.name}}) </span></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <h2> Bordering countries</h2>
+  <table class="table table-striped">
+    <tr *ngFor="let border of country?.borders">
+      <td><a href="/detail/{{border}}">{{border}}</a></td>
+    </tr>
+    <tbody>
+    </tbody>
+  </table>
+
+
+</div>
