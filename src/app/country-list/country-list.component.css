@@ -3,6 +3,7 @@
   font-size: 14px;
   border: 5px solid #00a0d7;
   margin-top: 5%;
+  background: #fff;
 }
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #00a0d7;
