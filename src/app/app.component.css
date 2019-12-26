@@ -19,7 +19,7 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
-.container {
+/*.container {
     background: url('/assets/worldmap.jpg') left 200px no-repeat;
     background-size: 55%;
     bottom: 0;
@@ -28,4 +28,4 @@ a:hover {
     position: absolute;
     right: 0;
     top: 0;
-}
+}*/
