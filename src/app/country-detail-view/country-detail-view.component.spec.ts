@@ -6,8 +6,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CountryDetailViewComponent', () => {
   let component: CountryDetailViewComponent;
+  let testHost: CountryDetailViewComponent;
   let fixture: ComponentFixture<CountryDetailViewComponent>;
-
+  let heroEl: HTMLElement;
+    
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -29,23 +31,25 @@ describe('CountryDetailViewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create Component', () => {
     expect(component).toBeTruthy();
   });
 
- /* it('should have a method called ngOnInit', () => {
-    expect(component.ngOnInit).toBeTruthy();
-});
-
-it('should return json from API', () => {
-  let result=component.getCountry('AF');
-  expect(result).length>0;
-});
-  
-  it('should have a method called getCountries', () => {
-     expect(component.getCountry).toBeTruthy();
-});
-*/
+  it("should have MAP", () => {
+    fixture  = TestBed.createComponent(CountryDetailViewComponent);
+    testHost = fixture.componentInstance;
+    heroEl   = fixture.nativeElement.querySelector('.card-detail');
+    fixture.detectChanges(); // trigger initial data binding
+    expect(heroEl.innerHTML).toContain('agm-map');
+  });
 
 
-});
+  it("should have Flag image", () => {
+    fixture  = TestBed.createComponent(CountryDetailViewComponent);
+    testHost = fixture.componentInstance;
+    heroEl   = fixture.nativeElement.querySelector('.table');
+    fixture.detectChanges(); // trigger initial data binding
+    expect(heroEl.innerHTML).toContain('img');
+  });
+
+  });

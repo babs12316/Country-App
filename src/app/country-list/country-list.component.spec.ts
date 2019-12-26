@@ -6,7 +6,8 @@ import { CountryListComponent } from "./country-list.component";
 describe("CountryListComponent", () => {
   let component: CountryListComponent;
   let fixture: ComponentFixture<CountryListComponent>;
-
+  let testHost: CountryListComponent;
+  let heroEl: HTMLElement;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientModule],
@@ -24,16 +25,27 @@ describe("CountryListComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it("should have Poplulation col", () => {
+    fixture = TestBed.createComponent(CountryListComponent);
+    testHost = fixture.componentInstance;
+    heroEl = fixture.nativeElement.querySelector(".table");
+    fixture.detectChanges(); // trigger initial data binding
+    expect(heroEl.innerHTML).toContain("Population");
+  });
+
+  it("should have Country col", () => {
+    fixture = TestBed.createComponent(CountryListComponent);
+    testHost = fixture.componentInstance;
+    heroEl = fixture.nativeElement.querySelector(".table");
+    fixture.detectChanges(); // trigger initial data binding
+    expect(heroEl.innerHTML).toContain("Country");
+  });
+
   it("should have a method called ngOnInit", () => {
     expect(component.ngOnInit).toBeTruthy();
   });
 
   it("should have a method called getCountries", () => {
     expect(component.getCountries).toBeTruthy();
-  });
-
-  it("should return json from API", () => {
-    let result = component.ngOnInit();
-    expect(result).length > 0;
   });
 });
