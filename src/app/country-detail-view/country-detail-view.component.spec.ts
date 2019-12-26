@@ -46,8 +46,6 @@ it('should return json from API', () => {
      expect(component.getCountry).toBeTruthy();
 });
 
-it('should have a title Country Map', () => {
-  expect(component.title).toBe('Country Map');
-});
+
 
 });
