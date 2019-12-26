@@ -33,7 +33,7 @@ describe('CountryDetailViewComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a method called ngOnInit', () => {
+ /* it('should have a method called ngOnInit', () => {
     expect(component.ngOnInit).toBeTruthy();
 });
 
@@ -45,7 +45,7 @@ it('should return json from API', () => {
   it('should have a method called getCountries', () => {
      expect(component.getCountry).toBeTruthy();
 });
-
+*/
 
 
 });
